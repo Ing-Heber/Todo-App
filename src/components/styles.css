@@ -92,11 +92,11 @@ input[type='checkbox'].input__checkbox {
 }
 
 input[type='checkbox'].input__checkbox {
-    content: url('/assets/circle-unchecked.svg');
+    content: url('./assets/circle-unchecked.svg');
 }
 
 input[type='checkbox'].input__checkbox:checked {
-    content: url('/assets/circle-checked.svg');
+    content: url('./assets/circle-checked.svg');
 }
 
 input[type='checkbox'].input__checkbox:active,
