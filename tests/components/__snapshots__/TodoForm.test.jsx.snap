@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <TodoForm /> should match with snapshot 1`] = `
+<div>
+  <form
+    class="inline-form"
+  >
+    <input
+      class="input__text"
+      name="description"
+      placeholder="Add Todo"
+      type="text"
+      value=""
+    />
+    <button
+      aria-label="Add Todo"
+      class="btn__solid--primary"
+      type="submit"
+    >
+      <span
+        class="d-none d-md-block"
+      >
+        Add Todo
+      </span>
+      <img
+        alt="Plus Image"
+        height="auto"
+        src="/assets/plus.svg"
+        width="16px"
+      />
+    </button>
+  </form>
+</div>
+`;
