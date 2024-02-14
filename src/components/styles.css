@@ -99,6 +99,12 @@ input[type='checkbox'].input__checkbox:checked {
     content: url('./assets/circle-checked.svg');
 }
 
+input[type='checkbox'].input__checkbox,
+input[type='checkbox'].input__checkbox:checked {
+    min-height: 18px;
+    min-width: 18px;
+}
+
 input[type='checkbox'].input__checkbox:active,
 input[type='checkbox'].input__checkbox:focus-visible {
     background: var(--gray-400);
