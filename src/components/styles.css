@@ -87,8 +87,9 @@ input[type='checkbox'].input__checkbox {
     appearance: none;
     background-color: transparent;
     cursor: pointer;
+    height: 28px;
     margin: 0;
-    padding: 5px;
+    width: 28px;
 }
 
 input[type='checkbox'].input__checkbox {
@@ -103,6 +104,7 @@ input[type='checkbox'].input__checkbox,
 input[type='checkbox'].input__checkbox:checked {
     min-height: 18px;
     min-width: 18px;
+    padding: 5px;
 }
 
 input[type='checkbox'].input__checkbox:active,
