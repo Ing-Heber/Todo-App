@@ -62,7 +62,7 @@ input.input__text {
     border-radius: 8px;
     border: 1px solid var(--gray-700);
     color: var(--gray-300);
-    display: flex;
+    /* display: flex; */
     flex: 1 0 0;
     font-family: Inter;
     font-size: 16px;
@@ -80,6 +80,15 @@ input.input__text:focus-visible {
     color: var(--gray-100);
     outline: none;
 }
+
+/* Change the white to any color */
+input.input__text:-webkit-autofill,
+input.input__text:-webkit-autofill:hover,
+input.input__text:-webkit-autofill:focus,
+input.input__text:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--gray-500) inset !important;
+}
+
 
 
 input[type='checkbox'].input__checkbox {
