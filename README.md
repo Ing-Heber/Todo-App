@@ -12,6 +12,9 @@ A todo app based in a design from Figma, Do not worry if you refresh your browse
 # Coming soon!
 - Edit a todo.
 
+# See the app
+Visit page: https://ing-heber.github.io/Todo-App/
+
 # Run the app
 1) Clone the repo.
 2) Type "yarn" in terminal
