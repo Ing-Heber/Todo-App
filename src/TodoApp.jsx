@@ -3,17 +3,20 @@ import { useTodos } from "./hooks/useTodos";
 import 'animate.css'
 
 export const TodoApp = () => {
-  const {
-    todos,
-    onAddTodo,
-    onToggleTodo,
-    onDeleteTodo,
-    emptyTodos,
-    allTodos,
-    completedTodos: completed
-  } = useTodos();
+    const {
+        todos,
+        onAddTodo,
+        onToggleTodo,
+        onDeleteTodo,
+        emptyTodos,
+        allTodos,
+        completedTodos,
+        pendingTodos,
+    } = useTodos();
 
-  const completedTodos = allTodos === 0 ? allTodos : `${completed} of ${allTodos}`;
+    const [filterTodosByStatus, setFilterTodosByStatus] = useState(showTypes.all);
+    const completed = `${completedTodos} of ${allTodos}`;
+    const filteredTodos = useMemo(() => getFilteredTodosByStatus(filterTodosByStatus, todos), [filterTodosByStatus, todos]);
 
   return (
     <div className="animate__animated animate__fadeIn">
@@ -42,13 +45,12 @@ export const TodoApp = () => {
             </div>
           </div>
 
-          {
-            emptyTodos
-              ? <TodoEmpty />
-              : <TodoList todos={todos} toggleTodo={onToggleTodo} deleteTodo={onDeleteTodo} />
-          }
+                    {(emptyTodos || !filteredTodos.length)
+                        ? <TodoEmpty pendingTodos={pendingTodos}/>
+                        : <TodoList todos={filteredTodos} toggleTodo={onToggleTodo} deleteTodo={onDeleteTodo}/>
+                    }
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+    )
 }
