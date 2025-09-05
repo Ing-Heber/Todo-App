@@ -29,7 +29,7 @@ export const TodoForm = ({ onNewTodo }) => {
 
       <button aria-label="Add Todo" type='submit' className='btn__solid--primary'>
         <span className='d-none d-md-block'>Add Todo</span>
-        <img src='./assets/plus.svg' alt="Plus Image" width='16px' height='auto' />
+        <img src='/assets/plus.svg' alt="Plus Image" width='16px' height='auto' />
       </button>
 
     </form>

@@ -1,6 +1,5 @@
 import './styles.css';
 import PropTypes from "prop-types";
-import clipboard from '/assets/clipboard.svg';
 
 export const TodoEmpty = ({pendingTodos = 0}) => {
     const count = Number.isFinite(pendingTodos) ? pendingTodos : 0;
@@ -22,7 +21,7 @@ export const TodoEmpty = ({pendingTodos = 0}) => {
 
     return (
         <div className='todo-empty__container d-flex flex-column align-items-center animate__animated animate__fadeIn'>
-            <img src={clipboard} alt="Clipboard" width={56} />
+            <img src='/assets/clipboard.svg' alt="Clipboard" width={56} />
             <h3 className='text-center color-gray-300'>
                 {text.title} <br/>
                 <span className='fw-regular'>{text.message}</span>
