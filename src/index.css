@@ -207,4 +207,8 @@
       display: block;
     }
 
+    .d-md-row{
+        flex-direction: row;
+    }
+
   }

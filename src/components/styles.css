@@ -29,6 +29,18 @@ button.btn__solid--primary:focus-visible {
     outline: none;
 }
 
+button.btn__text--primary {
+    background: none;
+    border: none;
+    display: flex;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    gap: 8px;
+    line-height: 140%;
+    padding: 0;
+}
 
 button.btn--delete {
     background: none;
@@ -48,6 +60,67 @@ button.btn--delete:focus-visible {
     button.btn--delete:active,
     button.btn--delete:focus-visible) svg path {
     fill: var(--danger);
+}
+
+div.dropdown button.dropdown__toggle {
+    background: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+
+div.dropdown button.dropdown__toggle:hover,
+div.dropdown button.dropdown__toggle:active,
+div.dropdown button.dropdown__toggle:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid var(--purple-dark);
+    outline-offset: -2px;
+}
+
+div.dropdown__container {
+    border-radius: 8px;
+    background: var(--gray-700);
+    flex-direction: column;
+    gap: 8px;
+    padding: 2px;
+    position: absolute;
+    z-index: 10;
+}
+
+div.dropdown__container.hide {
+    display: none;
+}
+
+div.dropdown__container.show {
+    display: flex;
+}
+
+div.dropdown__container button.dropdown__item {
+    background: var(--gray-700);
+    border: none;
+    border-radius: 8px;
+    color: var(--gray-300);
+    cursor: pointer;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+div.dropdown__container button.dropdown__item.active,
+div.dropdown__container button.dropdown__item:hover,
+div.dropdown__container button.dropdown__item.focused {
+    background: var(--gray-500);
+}
+
+div.dropdown__container button.dropdown__item:focus-visible {
+    background: var(--gray-500);
+    outline: 2px solid var(--purple-dark);
+    outline-offset: -2px;
 }
 
 form.inline-form {
