@@ -19,8 +19,9 @@ export const TodoApp = () => {
     } = useTodos();
 
     const [filterTodosByStatus, setFilterTodosByStatus] = useState(showTypes.all);
-    const completed = `${completedTodos} of ${allTodos}`;
     const filteredTodos = useMemo(() => getFilteredTodosByStatus(filterTodosByStatus, todos), [filterTodosByStatus, todos]);
+    const completed = `${completedTodos} of ${allTodos}`;
+    const shouldDisplayStatusDropdown = !emptyTodos;
 
     return (
         <div className="animate__animated animate__fadeIn">
@@ -43,8 +44,11 @@ export const TodoApp = () => {
                                 <p className="count small">{allTodos}</p>
                             </div>
 
-                            <Dropdown btnClasses={"color-purple"} btnText={'Show'} dropdownId={'status-dropdown'} dropdownType={'Show items by status'} handleShowTodosBy={setFilterTodosByStatus}
-                                      items={DropdownItems} />
+                            {shouldDisplayStatusDropdown && (
+                                <Dropdown btnClasses={"color-purple"} btnText={'Show'} dropdownId={'status-dropdown'}
+                                          dropdownType={'Show items by status'}
+                                          handleShowTodosBy={setFilterTodosByStatus}
+                                          items={DropdownItems}/>)}
                         </div>
 
                         <div className="d-flex flex-column d-md-row count__container">
