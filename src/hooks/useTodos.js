@@ -41,6 +41,7 @@ export const useTodos = () => {
         onDeleteTodo,
         emptyTodos: todos.length < 1,
         allTodos: todos.length,
-        completedTodos: todos.filter(todo => todo.completed !== false).length
+        completedTodos: todos.filter(todo => todo.completed !== false).length,
+        pendingTodos: todos.length - todos.filter(todo => todo.completed).length,
     }
 }

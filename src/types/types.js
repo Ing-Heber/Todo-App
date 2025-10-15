@@ -3,3 +3,9 @@ export const types = {
     toggleTodo: '[TODO] Toggle todo',
     deleteTodo: '[TODO] Delete todo'
 }
+
+export const showTypes = {
+    all: 'ALL',
+    completed: 'COMPLETED',
+    pending: 'PENDING'
+}
